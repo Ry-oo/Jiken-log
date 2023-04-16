@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { client } from "../../../libs/client";
-import MediaCard from "../parts/card";
+import { MediaCard } from "../../components/mediaCard";
 
 export const getStaticProps = async () => {
   const data = await client.get({
     endpoint: "jlog",
   });
-  console.log(data);
+
   return {
     props: {
       blog: data.contents,
@@ -22,7 +22,7 @@ export const Active = ({ blog }) => {
       </h2>
 
       <div>
-        <ul className="grid grid-cols-3 gap-4 m-10">
+        <ul className="grid grid-cols-3 gap-4 mt-10 mx-20">
           {blog.map((blog) => (
             <li key={blog.id}>
               <Link href={`/blog/${blog.id}`}>
@@ -35,5 +35,4 @@ export const Active = ({ blog }) => {
     </div>
   );
 };
-
 export default Active;

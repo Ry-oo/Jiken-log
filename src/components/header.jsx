@@ -13,12 +13,9 @@ export const Header = () => {
           </Link>
         </div>
 
-        <ul className=" flex  text-xl justify-around w-2/6 ">
+        <ul className=" flex  text-xl justify-around space-x-6">
           <li>
             <Link href={"/post/active"}>活動内容</Link>
-          </li>
-          <li>
-            <Link href={"/post/info"}>連絡事項</Link>
           </li>
 
           <li>
@@ -30,4 +27,3 @@ export const Header = () => {
     </header>
   );
 };
-export default Header;

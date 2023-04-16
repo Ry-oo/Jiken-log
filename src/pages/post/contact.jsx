@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 
-export default function Contact() {
+export const Contact = () => {
   const nameRef = useRef(null);
   const emailRef = useRef(null);
   const messageRef = useRef(null);
@@ -21,13 +21,11 @@ export default function Contact() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    }).then((res) => {
-      if (res.status === 200) console.log("メール送信完了");
     });
   };
   return (
-    <div className="h-screen">
-      <h2 className="text-center text-3xl  mt-40">お問い合わせ</h2>
+    <div className="h-screen bg-slate-50">
+      <h2 className="text-center text-3xl  ">お問い合わせ</h2>
 
       <form className="my-10" onSubmit={(e) => handleSubmit(e)}>
         <div className="flex flex-col items-center ">
@@ -80,4 +78,5 @@ export default function Contact() {
       </form>
     </div>
   );
-}
+};
+export default Contact;
