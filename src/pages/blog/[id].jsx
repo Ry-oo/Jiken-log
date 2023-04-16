@@ -16,7 +16,7 @@ export const getStaticPaths = async () => {
   return { paths, fallback: false };
 };
 
-export default function Blog({ blog }) {
+export const Blog = ({ blog }) => {
   return (
     <div className="bg-gray-50">
       <div className="h-screen  mx-60  ">
@@ -26,4 +26,5 @@ export default function Blog({ blog }) {
       </div>
     </div>
   );
-}
+};
+export default Blog;
