@@ -18,12 +18,12 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 export const Active: NextPage<Props> = (props) => {
   return (
-    <div className="h-screen bg-green-50">
-      <h2 className="text-3xl text-center italic">
+    <div className="h-screen bg-green-50 w-full">
+      <h2 className=" text-sm mx-2 mb-6 md:text-3xl text-center italic ">
         ~児童教育研究会の主な活動内容（2023編）~
       </h2>
 
-      <ul className="grid grid-cols-3 gap-4 mt-10 mx-20">
+      <ul className=" flex flex-col space-y-2 items-center mt-4 md:grid md:grid-cols-3 md:gap-4 md:mt-10 md:mx-20">
         {props.contents.map((content) => (
           <li key={content.id}>
             <Link href={`/blog/${content.id}`}>
