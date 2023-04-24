@@ -31,7 +31,7 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 const Blog: NextPage<Blog> = (props) => {
   return (
     <div className="bg-gray-50">
-      <div className="h-screen  mx-60  ">
+      <div className="h-screen mx-4 md:mx-60  ">
         <h1 className="text-2xl text-center">{props.title}</h1>
         <br />
         <article dangerouslySetInnerHTML={{ __html: `${props.body}` }} />
