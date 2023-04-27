@@ -4,14 +4,19 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { Blog } from "../../types/blogType";
+import styles from "../styles/Home.module.css";
 
 type Props = Pick<Blog, "image" | "title">;
 
 export const MediaCard: FC<Props> = ({ image, title }) => {
   return (
-    <Card className="w-80">
-      <CardMedia className="h-32" image={image.url} title="タイトル" />
-      <CardContent>
+    <Card className={styles.card}>
+      <CardMedia
+        className={styles.CardMedia}
+        image={image.url}
+        title="タイトル"
+      />
+      <CardContent className={styles.CardContent}>
         <Typography>{title}</Typography>
       </CardContent>
     </Card>

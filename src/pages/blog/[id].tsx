@@ -1,7 +1,8 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 import { client } from "../../../libs/client";
-import { Blog, Props } from "../../../types/blogType";
+import { Blog } from "../../../types/blogType";
 import { MicroCMSContentId, MicroCMSDate } from "microcms-js-sdk";
+import styles from "../../styles/Home.module.css";
 
 type dataType = Blog & MicroCMSContentId & MicroCMSDate;
 
@@ -30,9 +31,9 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 };
 const Blog: NextPage<Blog> = (props) => {
   return (
-    <div className="bg-gray-50">
-      <div className="h-screen  mx-60  ">
-        <h1 className="text-2xl text-center">{props.title}</h1>
+    <div className={styles.id}>
+      <div>
+        <h1>{props.title}</h1>
         <br />
         <article dangerouslySetInnerHTML={{ __html: `${props.body}` }} />
       </div>
