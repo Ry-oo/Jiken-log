@@ -1,0 +1,297 @@
+/* maincontents のスタイリング*/
+
+.view {
+  height: 100vh;
+  overflow: scroll;
+  background: linear-gradient(#ffffff, #ffffa8);
+}
+.explanation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.explanation h2 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.explanation p {
+  margin-bottom: 0.5rem;
+  width: calc((100% / 3) * 2);
+}
+
+.snsInfo h2 {
+  text-align: center;
+  font-size: 1.5rem /* 24px */;
+  line-height: 2rem /* 32px */;
+  margin-top: 2rem /* 32px */;
+}
+.snsInfo p {
+  text-align: center;
+}
+
+.snsImage {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 3.5rem /* 56px */;
+}
+.snsImage Image {
+  margin-right: 0.5rem;
+}
+.snsImage Link:first-child {
+  margin-right: 2.5rem;
+}
+
+/* active-tsxのスタイリング */
+
+.active {
+  height: 100vh;
+  font-size: italic;
+  background: linear-gradient(#ffffff, #ffff9e);
+  overflow: scroll;
+}
+
+.active h2 {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .active ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0.5rem 1.5rem 0.5rem;
+  }
+  .active li {
+    margin-top: 1rem;
+  }
+  .active h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .active ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2.5rem 5rem 0 5rem;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  .active h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* contact.tsxのスタイリング*/
+.contact {
+  height: 100vh;
+  background: linear-gradient(#ffffff, #ffffa8);
+  overflow: scroll;
+}
+.contact form {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+.contact label {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact form > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact input {
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline-style: solid;
+  outline-color: #a8a8a8;
+}
+.contact textarea {
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  outline-style: solid;
+  outline-color: #a8a8a8;
+}
+.contact button {
+  outline-style: solid;
+  width: 7rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  margin: 2.5rem 0 2.5rem 0;
+  background-color: #ffff89;
+}
+.contact button:hover {
+  background-color: #ffdc00;
+}
+
+@media (width < 300px) {
+  .contact textarea {
+    width: 16rem;
+    height: 6rem;
+  }
+  .contact h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (300px <= width < 480px) {
+  .contact h2 {
+    font-size: 1.875rem;
+  }
+  .contact imput {
+    width: 18rem;
+  }
+  .contact textarea {
+    width: 20rem;
+    height: 8rem;
+  }
+}
+@media (width > 480px) {
+  .contact textarea {
+    width: 24rem;
+    height: 10rem;
+  }
+  .contact h2 {
+    font-size: 2rem;
+  }
+}
+
+/* [id]のスタイリング*/
+.id {
+  overflow: scroll;
+  height: 100vh;
+  background: linear-gradient(#ffffff, #ffffa8);
+}
+.id h1 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  text-align: center;
+}
+
+@media (width <= 300px) {
+  .id div {
+    margin: 0 1rem 0 1rem;
+  }
+}
+@media (300px< width <= 480px) {
+  .id div {
+    margin: 0 2.5rem 0 2.5rem;
+  }
+}
+@media (480px< width <= 780px) {
+  .id div {
+    margin: 0 3.5rem 0 3.5rem;
+  }
+}
+
+@media (780px < width <= 1024px) {
+  .id div {
+    margin: 0 7rem 0 7rem;
+  }
+}
+@media (width > 1024px) {
+  .id div {
+    margin: 0 10rem 0 10rem;
+  }
+}
+
+/* headerのスタイリング*/
+
+.header {
+  margin: 1.5rem 2rem 1.5rem 2rem;
+}
+.header nav {
+  display: flex;
+}
+
+.header div {
+  font-size: 1.875rem;
+}
+.header Link {
+  display: flex;
+  margin: 0 0.5rem 0 0.5rem;
+}
+.header h3 > span {
+  color: #ffdc00;
+}
+.header ul {
+  font-size: 1.25rem;
+  display: flex;
+  margin: 0.5rem 2rem 0 2rem;
+}
+.header li {
+  color: #434343;
+}
+.header li:hover {
+  color: #c3c3c3;
+}
+
+@media (width < 480px) {
+  .header nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header ul > li {
+    margin-left: 0.5rem;
+  }
+}
+@media (480px <= width < 768px) {
+  .header nav {
+    display: flex;
+    justify-content: space-around;
+  }
+  .header ul > li {
+    margin-left: 1rem;
+  }
+}
+@media (width >= 768px) {
+  .header nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  .header ul > li {
+    margin-left: 2rem;
+  }
+}
+
+/*footerのスタイリング*/
+.footer {
+  text-align: center;
+  background-color: #efefef;
+}
+.footer p {
+  color: #707070;
+}
+
+/*mainCardのスタイリング*/
+.card {
+  width: 15rem;
+}
+.CardMedia {
+  height: 8rem;
+}
+.CardContent {
+  height: 3.5rem;
+}
+
+@media (width<300px) {
+  .card {
+    width: 12rem;
+  }
+  .CardMedia {
+    height: 6rem;
+  }
+  .CardContent {
+    height: 3rem;
+  }
+}
