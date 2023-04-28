@@ -17,10 +17,10 @@ export const MainContents: FC = () => {
           児童教育研究会とは明治学院大学で活動するサークルです。横浜キャンパスを活動場所にして週2日水曜日と土曜日に活動を行っていまして、小学生年代の子どもたちと月1回交流する土曜学校やクリスマスに行うクリスマス子供会。その他数々のイベントを企画、運営し地域の子どもたちと交流をしています!
         </p>
       </div>
-      <div className=" flex justify-end mr-10 md:mr-40">
+      <div className={styles.scenery}>
         <Image alt="linkのicon" src="/arrow.png" width="25" height="25" />
         <Link href="/post/active">
-          <p className="text-gray-400">活動風景</p>
+          <p>活動風景</p>
         </Link>
       </div>
 

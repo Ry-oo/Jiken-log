@@ -22,6 +22,15 @@
   width: calc((100% / 3) * 2);
 }
 
+.scenery {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2.5rem;
+}
+.scenery p {
+  color: #a1a1a1;
+}
+
 .snsInfo h2 {
   text-align: center;
   font-size: 1.5rem /* 24px */;
@@ -43,9 +52,12 @@
 .snsImage Link:first-child {
   margin-right: 2.5rem;
 }
-
+@media (width>= 768px) {
+  .scenery {
+    margin-right: 10rem;
+  }
+}
 /* active-tsxのスタイリング */
-
 .active {
   height: 100vh;
   font-size: italic;
@@ -57,7 +69,7 @@
   text-align: center;
 }
 
-@media (max-width: 768px) {
+@media (width < 768px) {
   .active ul {
     display: flex;
     flex-direction: column;
@@ -72,7 +84,7 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (width >= 768px) {
   .active ul {
     display: flex;
     justify-content: space-evenly;
