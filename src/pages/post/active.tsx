@@ -10,8 +10,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const data = await client.getList<Blog>({
     endpoint: "jlog",
   });
-  console.log(data);
-
   return {
     props: data,
   };

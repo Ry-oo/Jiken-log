@@ -9,7 +9,6 @@ export const sendGmail = (req: NextApiRequest, res: NextApiResponse) => {
       pass: process.env.GMAILPASSWORD,
     },
   });
-
   const toHostMailData = {
     from: `${req.body.email}`,
     to: "shigetar7212@gmail.com",
