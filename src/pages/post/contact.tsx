@@ -28,6 +28,7 @@ export const Contact: NextPage = () => {
     });
     alert("送信されました！");
   };
+
   return (
     <div className={styles.contact}>
       <h2>お問い合わせ</h2>

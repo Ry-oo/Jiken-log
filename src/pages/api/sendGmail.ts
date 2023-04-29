@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import nodemailer from "nodemailer";
+
 export const sendGmail = (req: NextApiRequest, res: NextApiResponse) => {
   const transPorter = nodemailer.createTransport({
     host: "smtp.gmail.com",
@@ -28,4 +29,5 @@ export const sendGmail = (req: NextApiRequest, res: NextApiResponse) => {
   });
   res.send("success");
 };
+
 export default sendGmail;
