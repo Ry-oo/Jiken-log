@@ -52,7 +52,7 @@
 .snsImage Link:first-child {
   margin-right: 2.5rem;
 }
-@media (width>= 768px) {
+@media (min-width: 768px) {
   .scenery {
     margin-right: 10rem;
   }
